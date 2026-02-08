@@ -14,8 +14,8 @@ struct header {
 int main() {
   void *increased_memory = sbrk(heap_increase);
   struct header *zeroes = (struct header *)increased_memory;
-  struct header *ones =
-      (struct header *)((char *)increased_memory + memory_block_size);
+  struct header *ones = (struct header *)((char *)increased_memory + memory_block_size);
+     
 
   zeroes->size = memory_block_size;
   zeroes->next = NULL;
